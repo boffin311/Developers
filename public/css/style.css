@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+    content: "";
+    z-index: -1;
+    position: inherit;
+    left: inherit;
+    top: inherit;
+    width: inherit;
+    height: inherit;
+    background-image: inherit;
+    background-size: cover;
+    filter: blur(8px);
+}
+
+body {
+    background-image: url('../images/developer-background.jpg');
+    background-size: 0 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
+
+.divForm {
+    text-align: center;
+   position: absolute;
+   left: 50%;
+   top: 40%;
+    padding: 1.5rem;
+    
+    
+    
+    
+}
+/* .mainDivForm::before{
+    content: "";
+    z-index: -1;
+    position: inherit;
+    left: inherit;
+    top: inherit;
+    width: inherit;
+    height: inherit;
+    background-image: inherit;
+    background-size: cover;
+    filter: blur(100px);
+
+} */
+/* .mainDivForm{
+    background-image: url('../images/developer-background.jpg');
+    text-align: center;
+    position: absolute;
+    width: 100vh;
+    height: fit-content;
+    /* background-size: 0 0; */
+  
+.commonInput{
+    padding: .3rem;
+    margin: 1rem;
+    border: 2px solid black;
+}
