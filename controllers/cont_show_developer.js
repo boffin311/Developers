@@ -15,9 +15,19 @@ module.exports.showSingleDeveloper = (req, res, next) => {
       console.log(id)
     Developers.findById(id).then((developer) => {
         console.log(developer)
-        res.sendFile(path.join(__dirname,'..','views','add_developers.html'))
-       // res.render('edit_developer',{developer:developer})
+      //  res.sendFile(path.join(__dirname,'..','views','add_developers.html'))
+        res.render('edit_developer',{developer:developer,developerId:id})
     }).catch((err) => {
         
     });
+
+}
+module.exports.editDeveloper=(req,res,next)=>{
+    new Developers(req.body.userName,req.body.specialization,req.body.github,req.body.country).updateDeveloper(req.params.developerId)
+    .then((result) => {
+      console.log(result)  
+    }).catch((err) => {
+        
+    });
+    res.redirect('/developers')
 }
